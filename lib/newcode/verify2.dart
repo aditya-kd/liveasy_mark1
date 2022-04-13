@@ -94,6 +94,7 @@ Widget build(BuildContext context)
                   print('Entered OTP $smsCode');
                   print('CodeSent at verify $codeSent');
                  AuthService().signInWithOTP(smsCode, verificationId, context);
+                 print('User logged in succesfully');
                  Navigator.push(
                       context,
                       MaterialPageRoute(
@@ -111,6 +112,7 @@ Future<void> verifyPhone(phoneNo) async{
       AuthService().signIn(authResult);
       ScaffoldMessenger.of(context)
                     .showSnackBar(const SnackBar(content: Text('Phone Verified.')));
+      print('Phone Verified');
     });
  
 final PhoneVerificationFailed verificationfailed = ((FirebaseAuthException authException)
@@ -118,6 +120,7 @@ final PhoneVerificationFailed verificationfailed = ((FirebaseAuthException authE
       print('Verification Failed, Aditya: ${authException.message}');
       ScaffoldMessenger.of(context)
                     .showSnackBar(const SnackBar(content: Text('Invalid code entered.')));
+      print('User entered invalid code');
     });
   
 final PhoneCodeSent smsSent = ((verificationId, forceResendingToken) {
@@ -127,6 +130,7 @@ final PhoneCodeSent smsSent = ((verificationId, forceResendingToken) {
       setState(() {
         codeSent=true;
       });
+  print('Code sent initiated');
     });
 
     final PhoneCodeAutoRetrievalTimeout autoTimeout = ((verificationId) {
