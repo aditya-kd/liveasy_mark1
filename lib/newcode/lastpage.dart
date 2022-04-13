@@ -87,6 +87,7 @@ children:[
            ]))),
             //Button
             ElevatedButton(
+                style: myBtnStyle,
                 onPressed: (){print("Continued with $_character");},
             child: const Text("CONTINUE"),            
             )
