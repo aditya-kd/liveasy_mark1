@@ -20,7 +20,7 @@ class _VerifyState extends State<Verify>{
 @override
 void initState(){
   super.initState();
-  // verifyPhone(currNum);
+  verifyPhone(currNum);
 }
 final TextEditingController _fieldOne = TextEditingController();
   final TextEditingController _fieldTwo = TextEditingController();
@@ -93,7 +93,7 @@ Widget build(BuildContext context)
                         _fieldFour.text;
                   print('Entered OTP $smsCode');
                   print('CodeSent at verify $codeSent');
-                //  AuthService().signInWithOTP(smsCode, verificationId, context);
+                 AuthService().signInWithOTP(smsCode, verificationId, context);
                  
                 }
               ),
