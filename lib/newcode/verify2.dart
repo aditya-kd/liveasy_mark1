@@ -94,6 +94,10 @@ Widget build(BuildContext context)
                   print('Entered OTP $smsCode');
                   print('CodeSent at verify $codeSent');
                  AuthService().signInWithOTP(smsCode, verificationId, context);
+                 Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => LastPage()));
                  
                 }
               ),
