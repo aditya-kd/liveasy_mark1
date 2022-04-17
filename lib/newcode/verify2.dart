@@ -1,6 +1,9 @@
+// ignore_for_file: avoid_print
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:liveasy_mark1/newcode/authservice.dart';
+import 'lastpage.dart';
 import 'uitheme.dart';
 
 String? currNum='';
@@ -98,7 +101,7 @@ Widget build(BuildContext context)
                  Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => LastPage()));
+                          builder: (context) => const LastPage(title: '',)));
                  
                 }
               ),

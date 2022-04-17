@@ -3,7 +3,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:liveasy_mark1/newcode/select_lang.dart';
 
-import 'dashboard.dart';
+import 'lastpage.dart';
+
 
 class AuthService{
 
@@ -12,7 +13,7 @@ class AuthService{
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (BuildContext context, snapshot) {
           if (snapshot.hasData) {
-            return const LastPage();
+            return  const LastPage(title: '',);
           } else {
             return SelectLanguage(title: '',);
           }

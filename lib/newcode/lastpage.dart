@@ -1,4 +1,9 @@
+// ignore_for_file: avoid_print, avoid_unnecessary_containers
+
 import 'package:flutter/material.dart';
+
+import 'authservice.dart';
+import 'uitheme.dart';
 enum SingingCharacter { lafayette , jefferson }
 class LastPage extends StatefulWidget {
   final String title;
@@ -17,10 +22,10 @@ class _LastPageState extends State<LastPage> {
 
  
 SingingCharacter? _character = SingingCharacter.lafayette; 
-  final middle= Container(child:Center(child:Icon(Icons.local_shipping_outlined)));
+  final middle= Container(child:const Center(child:Icon(Icons.local_shipping_outlined)));
 final right= Container(child: Column(
   crossAxisAlignment: CrossAxisAlignment.start,
-children:[
+children:const [
   Text("Transporter", style: TextStyle(fontSize: 23)),
   Text("Random text to chek if it ", style: TextStyle(fontSize:15))
 ]));
@@ -56,10 +61,10 @@ children:[
               });
             },
           ),),
-             Padding(padding: const EdgeInsets.all(8.0),child:Container(child:Center(child:Icon(Icons.house)))),
+             Padding(padding: const EdgeInsets.all(8.0),child:Container(child:const Center(child:Icon(Icons.house)))),
              Padding(padding: const EdgeInsets.all(8.0),child:Container(child: Column(
   crossAxisAlignment: CrossAxisAlignment.start,
-children:[
+children:const [
   Text("Shipper", style: TextStyle(fontSize: 25)),
   Text("Lorem ipsum dolor sit amet, ", style: TextStyle(fontSize:15))]
 )))

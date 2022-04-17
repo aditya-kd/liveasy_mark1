@@ -5,7 +5,7 @@ import 'enter_phone.dart';
 import 'uitheme.dart';
 String currVal = 'English';
 class SelectLanguage extends StatefulWidget {
-  SelectLanguage({Key? key, required this.title}) : super(key: key);
+  const SelectLanguage({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
